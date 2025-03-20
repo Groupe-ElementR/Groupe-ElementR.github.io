@@ -28,9 +28,37 @@ author-title: Auteur·es
 title-block-categories: false
 ---
 
+
+\
+
+**Diaporama d'intoduction**
+
+::: diapo
+<iframe class="slide" src="https://slides.com/tfeuillet/elementr/fullscreen">
+
+</iframe>
+:::
+
+\
+
+<center><a href="https://slides.com/tfeuillet/elementr/fullscreen" class="btn btn-outline-success" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a></center>
+
+\
+\
+
+**Support de mise en pratiques :**
+
+::: quartodoc
+<iframe class="slide2" src="https://analyse-spatiale-cf206d.gitpages.huma-num.fr/gwrGeodiv.html">
+
+</iframe>
+:::
+
+\
+
+<center><a href="https://analyse-spatiale-cf206d.gitpages.huma-num.fr/gwrGeodiv.html" class="btn btn-outline-success" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a></center>
+
+
 \
 
 
-Séance prévue le **20 mars 2025**.
-
-Formulaire d'inscription : [**https://evento.renater.fr/survey/la-regression-geographique...**](https://evento.renater.fr/survey/la-regression-geographique-ponderee-gwr-par-thierry-feuillet-3bq7shgp)

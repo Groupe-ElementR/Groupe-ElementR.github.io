@@ -8,96 +8,90 @@ title: "**Programme & inscriptions**"
 
 </iframe>
 
-### Informations séances à venir
+### Séances à venir :
 
 ::: panel-tabset
-
 #### **Retour d'experience**
-
--   **20 mars 2025 - Retour d'experience et pratique de la GWR**
-    -   <u>Horaire</u> : 13h-16h
-    -   <u>Lieu</u> : Salle 1.122, Bât. Sud Campus Condorcet
-    -   <u>Animation</u> : Thierry Feuillet (Université de Caen Normandie, UMR 6266 CNRS - IDEES) 
-    -   <u>Format</u> : présentiel
-    -   <u>Inscription obligatoire</u> : [Formulaire d'inscription](https://evento.renater.fr/survey/la-regression-geographique-ponderee-gwr-par-thierry-feuillet-3bq7shgp)
 
 #### **Séance thématique**
 
 #### **Atelier pratique**
 
 #### **Table ronde**
-
-
-
 :::
 
 \
 
-### Séances ElementR passées
+### Séances passées :
 
-::: panel-tabset
+\
 
-#### **Séance thématique**
-
--   **17 février 2025 - Analyse de semis de points sur un réseau spatial**
-    -   <u>Format</u> : présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance15_AR_semi_de_points.qmd)\
--   **21 juin 2024 - Introduction au web scraping avec R**
-    -   <u>Format</u> : présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance13_webscraping.qmd)\
--   **21 mai 2024 - Manipulation de données géographiques raster avec R**
-    -   <u>Format</u> : présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance12_raster_terra.html)\
--   **21 mars 2024 - Séance statistiques uni et bivariées**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance11_uni_bivarie.html)
--   **3 octobre 2023 - Production de documents computationnels**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance8_quarto.html)\
--   **23 mai 2023 - Analyse de réseau avec le package `igraph`**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance7_igraph.html)\
--   **21 avril 2023 - Manipulation de données géographiques vectorielles avec`sf`**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance6_geomatique_sf.html)\
--   **27 mars 2023 - Initiation à la cartographie avec le package `mapsf`**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance5_carto_mapsf.html)\
--   **25 Janvier 2023 - Représentation graphique avec R (et ggplot2)**
-    -   <u>Format</u> : Présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance4_ggplot.html)
--   **16 décembre 2022 - Initiation à R (pratique)**
-    -   <u>Format</u> : Présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance3.html)
--   **2 décembre 2022 - Initiation à R (théorique)**
-    -   <u>Format</u> : Présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance2.html)
--   **14 octobre 2022 - Séance introductive ElementR**
-    -   <u>Format</u> : Hybride
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance1.html)
+- **20 mars 2025 -  Retour d’experience et pratique de la GWR**\
+    -  <u>Format</u> : Hybride\
+    -  <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance16_GWR.qmd)\   
     
-    
-#### **Table ronde**
-
--   **24 Janvier 2025 - Les mains dans le code : organisation du travail, bricolage, reproductibilité avec R**
-    -   <u>Format</u> : Hybride
+-   **24 Janvier 2025 - [Table ronde] Les mains dans le code : organisation du travail, bricolage, reproductibilité avec R**\
+    -   <u>Format</u> : Hybride\
     -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance14_TR_workflow.qmd)\
--   **16 janvier 2024 - Faire de l'analyse textuelle sur R : pourquoi et comment ?**
-    -   <u>Format</u> : Hybride
+    
+-   **17 février 2025 - Analyse de semis de points sur un réseau spatial**\
+    -   <u>Format</u> : présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance15_AR_semi_de_points.qmd)\
+    
+-   **21 juin 2024 - Introduction au web scraping avec R**\
+    -   <u>Format</u> : présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance13_webscraping.qmd)\
+    
+-   **16 janvier 2024 - [Table ronde] Faire de l'analyse textuelle sur R : pourquoi et comment ?**\
+    -   <u>Format</u> : Hybride\
     -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance10_table_ronde_analyse_textuelle.qmd)\
-
-
-#### **Atelier pratique**
-
--   **14 février 2023 - Atelier pratique d'exploration de données d'enquête**
-    -   <u>Format</u> : Présentiel
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/atelier_enquete_sncf.html)
-
-#### **Retour d'experience**
-
--   **14 novembre 2023 - R au long cours : trois années de thèse avec R en géographie**
-    -   <u>Format</u> : Hybride
+    
+-   **21 mai 2024 - Manipulation de données géographiques raster avec R**\
+    -   <u>Format</u> : présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance12_raster_terra.qmd)\
+    
+-   **21 mars 2024 - Séance statistiques uni et bivariées**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance11_uni_bivarie.qmd)\
+    
+-   **14 novembre 2023 - R au long cours : trois années de thèse avec R en géographie**\
+    -   <u>Format</u> : Hybride\
     -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance9_R_et_these.qmd)\
+    
+-   **3 octobre 2023 - Production de documents computationnels**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance8_quarto.qmd)\
+    
+-   **23 mai 2023 - Analyse de réseau avec le package `igraph`**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance7_igraph.qmd)\
+    
+-   **21 avril 2023 - Manipulation de données géographiques vectorielles avec`sf`**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance6_geomatique_sf.qmd)\
+    
+-   **27 mars 2023 - Initiation à la cartographie avec le package `mapsf`**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance5_carto_mapsf.qmd)\
+    
+-   **14 février 2023 - Atelier pratique d'exploration de données d'enquête**\
+    -   <u>Format</u> : Présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/atelier_enquete_sncf.qmd)\
+    
+-   **25 Janvier 2023 - Représentation graphique avec R (et ggplot2)**\
+    -   <u>Format</u> : Présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance4_ggplot.qmd)\
+    
+-   **16 décembre 2022 - Initiation à R (pratique)**\
+    -   <u>Format</u> : Présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance3.qmd)\
+    
+-   **2 décembre 2022 - Initiation à R (théorique)**\
+    -   <u>Format</u> : Présentiel\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance2.qmd)\
+    
+-   **14 octobre 2022 - Séance introductive ElementR**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance1.qmd)\
 
 
-:::
