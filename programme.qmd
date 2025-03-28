@@ -34,29 +34,29 @@ title: "**Programme & inscriptions**"
     -  <u>Format</u> : Hybride\
     -  <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance16_GWR.qmd)\   
     
--   **24 Janvier 2025 - [Table ronde] Les mains dans le code : organisation du travail, bricolage, reproductibilité avec R**\
-    -   <u>Format</u> : Hybride\
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance14_TR_workflow.qmd)\
-    
 -   **17 février 2025 - Analyse de semis de points sur un réseau spatial**\
     -   <u>Format</u> : présentiel\
     -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance15_AR_semi_de_points.qmd)\
+    
+-   **24 Janvier 2025 - [Table ronde] Les mains dans le code : organisation du travail, bricolage, reproductibilité avec R**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance14_TR_workflow.qmd)\
     
 -   **21 juin 2024 - Introduction au web scraping avec R**\
     -   <u>Format</u> : présentiel\
     -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance13_webscraping.qmd)\
     
--   **16 janvier 2024 - [Table ronde] Faire de l'analyse textuelle sur R : pourquoi et comment ?**\
-    -   <u>Format</u> : Hybride\
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance10_table_ronde_analyse_textuelle.qmd)\
-    
 -   **21 mai 2024 - Manipulation de données géographiques raster avec R**\
     -   <u>Format</u> : présentiel\
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance12_raster_terra.qmd)\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance12_raster_terra.qmd)\    
     
 -   **21 mars 2024 - Séance statistiques uni et bivariées**\
     -   <u>Format</u> : Hybride\
-    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance11_uni_bivarie.qmd)\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance11_uni_bivarie.qmd)\    
+    
+-   **16 janvier 2024 - [Table ronde] Faire de l'analyse textuelle sur R : pourquoi et comment ?**\
+    -   <u>Format</u> : Hybride\
+    -   <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance10_table_ronde_analyse_textuelle.qmd)\
     
 -   **14 novembre 2023 - R au long cours : trois années de thèse avec R en géographie**\
     -   <u>Format</u> : Hybride\
