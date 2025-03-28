@@ -1,0 +1,38 @@
+---
+title: "Utilisation de la base de données OpenStreetMap"
+subtitle: "Géocodage, extraction de données, routing…"
+date: 05/13/2025
+bibliography: biblio/session17.bib
+nocite: '@*'
+csl: geo.csl
+author: 
+- name: Louis Laurian
+  orcid: 0009-0002-7275-5536
+- name: Matthieu Viry
+  orcid: 0000-0002-0693-8556
+- name: Ronan Ysebaert
+  orcid: 0000-0002-7344-5911
+
+image: img/osm.png
+about:
+  template: marquee
+  image: img/osm.png
+  image-width: 30em
+  image-shape: rounded
+  links:
+    - icon: github
+      text: GitLab
+      href: https://gitlab.huma-num.fr/elementr/website/-/blob/main/posts/seance16_GWR.qmd
+categories: 
+- modélisation
+- statistique
+- analyse spatiale
+published-title: Date de séance
+author-title: Auteur·es
+title-block-categories: false
+---
+
+
+\
+
+**Cette séance est prévue en mai 2025**. Les inscriptions seront ouvert début avril ([cf. programme](../programme.qmd))

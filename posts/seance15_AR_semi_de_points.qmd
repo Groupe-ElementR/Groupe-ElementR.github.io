@@ -30,4 +30,6 @@ title-block-categories: false
 
 \
 
-Mise en ligne du support et du matériel utilisés à venir.
+Cette séance thématique est en cours de valorisation et fera l'objet d'un [article Rzine](https://rzine.fr/publications/).
+
+Le lien vers celui-ci sera ajouté sur cette page après publication.

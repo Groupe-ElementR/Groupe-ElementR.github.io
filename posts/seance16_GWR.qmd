@@ -1,6 +1,6 @@
 ---
-title: "Retour d'experience et pratique de la GWR"
-subtitle: ""
+title: "La régression géographiquement pondérée (GWR)"
+subtitle: "Théorie et pratique en R"
 date: 03/20/2025
 bibliography: biblio/session16.bib
 nocite: '@*'
@@ -46,7 +46,7 @@ title-block-categories: false
 \
 \
 
-**Support de mise en pratiques :**
+**Support de mise en pratique :**
 
 ::: quartodoc
 <iframe class="slide2" src="https://analyse-spatiale-cf206d.gitpages.huma-num.fr/gwrGeodiv.html">

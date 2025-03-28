@@ -65,7 +65,7 @@ Cette séance s'adresse aux débutant·e·s. Elle initie au concept de collecte 
 
 \
 
-**Support d'atelier :**
+**La séance a été valorisée sous la forme d'un [**article Rzine**](https://rzine.fr/publications/) :**
 
 ::: quartodoc
 <iframe class="slide2" src="https://rzine-reviews.github.io/rzine_webscraping/">

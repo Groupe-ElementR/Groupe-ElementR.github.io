@@ -13,6 +13,10 @@ title: "**Programme & inscriptions**"
 ::: panel-tabset
 #### **Retour d'experience**
 
+- **mai 2025 -  Utilisation de la base de données OpenStreetMap (Géocodage, extraction de données, routing...)**\
+    -  <u>Animation</u> : Louis Laurian, Matthieu Viry, Ronan Ysebaert (UAR RIATE)
+    -  <u>Inscription</u> : ouverture le 1er Avril 2025
+
 #### **Séance thématique**
 
 #### **Atelier pratique**
@@ -26,7 +30,7 @@ title: "**Programme & inscriptions**"
 
 \
 
-- **20 mars 2025 -  Retour d’experience et pratique de la GWR**\
+- **20 mars 2025 -  La GWR : théorie et pratique en R**\
     -  <u>Format</u> : Hybride\
     -  <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance16_GWR.qmd)\   
     
