@@ -41,12 +41,12 @@ mamap
 ```
 :::
 
-::: {#maptext}
+::::::: {#maptext}
 ElementR est un groupe qui fédère trois unités de recherche en géographie : l'UMR [Géographie-Cités](https://geographie-cites.cnrs.fr/), de l'UMR [PRODIG](https://www.prodig.cnrs.fr/) et de l'UAR [RIATE](https://riate.cnrs.fr/). Les activités du groupe sont accessibles à l'ensemble des membres du Campus Condorcet.
 
 </br></br>
 
-::: columns
+:::::: columns
 ::: {.column width="35%"}
 <img src="img/8504.png" width="50%;"/>
 :::
@@ -58,5 +58,5 @@ ElementR est un groupe qui fédère trois unités de recherche en géographie : 
 ::: {.column width="29%"}
 <img src="img/riate.png" width="72%;" style="margin-top:35px;"/>
 :::
-:::
-:::
+::::::
+:::::::

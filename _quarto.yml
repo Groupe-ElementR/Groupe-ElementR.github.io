@@ -2,7 +2,7 @@ project:
   type: website
 lang: fr
 website:
-  title: "<b>ElementR</b>"
+  title: "ElementR"
   favicon: img/ElementR.png
   twitter-card: true
   site-url: https://elementr.gitpages.huma-num.fr/website/
