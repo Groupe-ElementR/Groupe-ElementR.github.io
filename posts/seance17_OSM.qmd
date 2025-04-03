@@ -6,12 +6,12 @@ bibliography: biblio/session17.bib
 nocite: '@*'
 csl: geo.csl
 author: 
-- name: Louis Laurian
-  orcid: 0009-0002-7275-5536
-- name: Matthieu Viry
-  orcid: 0000-0002-0693-8556
 - name: Ronan Ysebaert
   orcid: 0000-0002-7344-5911
+- name: Louis Laurian
+  orcid: 0009-0002-7275-5536
+- name: Timothée Giraud
+  orcid: 0000-0002-1932-3323
 
 image: img/osm.png
 about:
@@ -32,7 +32,15 @@ author-title: Auteur·es
 title-block-categories: false
 ---
 
+### Résumé
 
-\
+Cette séance propose de sensibiliser ses participants à l'usage d'[OpenStreetMap (OSM)](https://www.openstreetmap.org/#map=6/46.45/2.21) avec R. Après une présentation des spécificités et de l’écosystème de cette base de données participative, nous reviendrons sur les packages R utiles pour interfacer son contenu et réaliser des opérations variées : import de tuiles raster, géocodage, export de données géographiques, calcul d’itinéraires et temps de trajet avec différents modes de transport.
 
-**Cette séance est prévue en mai 2025**. Les inscriptions seront ouvert début avril ([cf. programme](../programme.qmd))
+La présentation sera étayée d’exemples d’application issus des travaux et projets du RIATE. Cela permettra d’aborder des aspects connexes liés à la complétude des données, l’implémentation de méthodes d’interpolation spatiale, la mise en place d’engins de routage pour des calculs d’itinéraires massifs ou encore la création d’indicateurs d’accessibilité dérivés de matrices origine-destination.
+
+Cette intervention se conclura par la présentation d’une chaine de traitement reproductible qui résumera les éléments abordés durant la séance et qui pourra utilement être remobilisée dans d’autres contextes spatiaux ou thématiques.
+
+### Inscription
+
+**Cette séance se déroulera 13 mai 2025, de 14 à 17h** en format hybride (salle 1.122 du bât. Sud de Condorcet). **L'inscription est obligatoire : [Formulaire](https://evento.renater.fr/survey/inscription-seance-elementr-asz8eydx)**
+

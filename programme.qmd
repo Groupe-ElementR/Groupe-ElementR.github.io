@@ -4,7 +4,7 @@ title: "**Programme & inscriptions**"
 
 ### Calendrier
 
-<iframe src="https://framagenda.org/apps/calendar/embed/d3TL5XK9tRBJNnmC/listYear/now" width="100%" height="470">
+<iframe src="https://framagenda.org/apps/calendar/embed/d3TL5XK9tRBJNnmC/listYear/now" width="100%" height="500">
 
 </iframe>
 
@@ -13,9 +13,11 @@ title: "**Programme & inscriptions**"
 ::: panel-tabset
 #### **Retour d'experience**
 
-- **mai 2025 -  Utilisation de la base de données OpenStreetMap (Géocodage, extraction de données, routing...)**\
-    -  <u>Animation</u> : Louis Laurian, Matthieu Viry, Ronan Ysebaert (UAR RIATE)
-    -  <u>Inscription</u> : ouverture le 1er Avril 2025
+- **13 mai 2025 -  Utiliser OpenStreetMap avec R**\
+    -  <u>Animation</u> : Ronan Ysebaert, Louis Laurian & Timothée Giraud (UAR RIATE)
+    -  <u>Résumé</u> : [Consulter la page de la séance](posts/seance17_OSM.qmd)\
+    -  <u>Format</u> : Hybride (Salle 1.122 bât. Sud Condorcet + visio) 
+    -  <u>Inscription obligatoire</u> : [**Formulaire**](https://evento.renater.fr/survey/inscription-seance-elementr-asz8eydx)
 
 #### **Séance thématique**
 
