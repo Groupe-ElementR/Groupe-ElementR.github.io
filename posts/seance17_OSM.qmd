@@ -19,16 +19,12 @@ about:
   image: img/osm.png
   image-width: 30em
   image-shape: rounded
-  links:
-    - icon: github
-      text: GitLab
-      href: https://gitlab.huma-num.fr/elementr/website/-/blob/main/posts/seance16_GWR.qmd
 categories: 
-- modélisation
+- cartographie
 - statistique
 - analyse spatiale
 published-title: Date de séance
-author-title: Auteur·es
+author-title: Auteurs
 title-block-categories: false
 ---
 
@@ -40,7 +36,7 @@ La présentation sera étayée d’exemples d’application issus des travaux et
 
 Cette intervention se conclura par la présentation d’une chaine de traitement reproductible qui résumera les éléments abordés durant la séance et qui pourra utilement être remobilisée dans d’autres contextes spatiaux ou thématiques.
 
-### Inscription
+[&#128187; Présentation - Mise en contexte](https://riatecom.github.io/osm-elementr-2025/) 
 
-**Cette séance se déroulera 13 mai 2025, de 14 à 17h** en format hybride (salle 1.122 du bât. Sud de Condorcet). **L'inscription est obligatoire : [Formulaire](https://evento.renater.fr/survey/inscription-seance-elementr-asz8eydx)**
+[&#128736; Atelier- Mise en pratique](https://riatecom.github.io/osm-elementr-2025-application/) 
 
