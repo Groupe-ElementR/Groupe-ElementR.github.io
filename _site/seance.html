@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.6">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,17 +33,20 @@ ul.task-list li input[type="checkbox"] {
 <link href="./img/ElementR.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6c21014d9765ba549c6ebad95917e4d7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0a9048d95e02c7ff9c82715fd5ddea4.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9bb7853d5e38463a2a926dfc6ae2446f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-bd91c6ac3848f1c999605ad9773365e4.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f16a42302e684189b7a7bdb329faede7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7b9e9361b03c62cec3a45e2a817df57f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f16a42302e684189b7a7bdb329faede7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -156,7 +159,169 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -394,9 +559,10 @@ window.Quarto = {
 <p><img src="img/ElementR.png" class="img-fluid"></p>
 </div></div>
         
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(18)</span></div><div class="category" data-category="YW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXU=">analyse de réseau <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5hbHlzZSUyMHNwYXRpYWxl">analyse spatiale <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Y2FydG9ncmFwaGll">cartographie <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29sbGVjdGU=">collecte <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZG9jdW1lbnQlMjBjb211dGF0aW9ubmVs">document comutationnel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW5xdSVDMyVBQXRl">enquête <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VvbWF0aXF1ZQ==">geomatique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3JhcGhpcXVl">graphique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZyVDMyVBOW90cmFpdGVtZW50">géotraitement <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aWdyYXBo">igraph <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mb3JtYXRpb24lMjBnJUMzJUE5b2dyYXBoaXF1ZQ==">information géographique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aW5pdGlhdGlvbg==">initiation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFwc2Y=">mapsf <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kJUMzJUE5bGlzYXRpb24=">modélisation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZWJvb2s=">notebook <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmFzdGVy">raster <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWN0aWJpbGl0JUMzJUE5">reproductibilité <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2Y=">sf <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGlxdWU=">statistique <span class="quarto-category-count">(3)</span></div><div class="category" data-category="dGglQzMlQThzZQ==">thèse <span class="quarto-category-count">(2)</span></div><div class="category" data-category="d2ViJTIwc2NyYXBpbmc=">web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya2Zsb3c=">workflow <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(18)</span></div><div class="category" data-category="YW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXU=">analyse de réseau <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5hbHlzZSUyMHNwYXRpYWxl">analyse spatiale <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Y2FydG9ncmFwaGll">cartographie <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29sbGVjdGU=">collecte <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZG9jdW1lbnQlMjBjb211dGF0aW9ubmVs">document comutationnel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW5xdSVDMyVBQXRl">enquête <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VvbWF0aXF1ZQ==">geomatique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZyVDMyVBOW90cmFpdGVtZW50">géotraitement <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3JhcGhpcXVl">graphique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aWdyYXBo">igraph <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mb3JtYXRpb24lMjBnJUMzJUE5b2dyYXBoaXF1ZQ==">information géographique <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aW5pdGlhdGlvbg==">initiation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFwc2Y=">mapsf <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kJUMzJUE5bGlzYXRpb24=">modélisation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bm90ZWJvb2s=">notebook <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmFzdGVy">raster <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWN0aWJpbGl0JUMzJUE5">reproductibilité <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2Y=">sf <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGlxdWU=">statistique <span class="quarto-category-count">(3)</span></div><div class="category" data-category="dGglQzMlQThzZQ==">thèse <span class="quarto-category-count">(2)</span></div><div class="category" data-category="d2ViJTIwc2NyYXBpbmc=">web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya2Zsb3c=">workflow <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -422,23 +588,23 @@ window.Quarto = {
 <div id="listing-seance" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-seance-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-seance'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Trier par</option>
-       <option value="index" data-direction="asc">Ordre par défaut</option>
-         <option value="listing-title-sort" data-direction="asc">
-          Titre
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Le plus ancien
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Le plus récent
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Auteur·rice
-        </option>
-     </select>
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-seance-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-seance'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Trier par</option>
+      <option value="index" data-direction="asc">Ordre par défaut</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Titre
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Le plus ancien
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Le plus récent
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Auteur·rice
+      </option>
+    </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -446,479 +612,458 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-
-<div class="quarto-post image-right" data-index="0" data-categories="bW9kJUMzJUE5bGlzYXRpb24lMkNzdGF0aXN0aXF1ZSUyQ2FuYWx5c2UlMjBzcGF0aWFsZQ==" data-listing-date-sort="1747087200000" data-listing-file-modified-sort="1743682633070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="Utilisation de la base de données OpenStreetMap">
-
-<div class="thumbnail">
-<a href="./posts/seance17_OSM.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="Y2FydG9ncmFwaGllJTJDc3RhdGlzdGlxdWUlMkNhbmFseXNlJTIwc3BhdGlhbGU=" data-listing-date-sort="1747087200000" data-listing-file-modified-sort="1747225274704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="157" data-listing-title-sort="Utilisation de la base de données OpenStreetMap">
+<div class="thumbnail"><a href="./posts/seance17_OSM.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/osm.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance17_OSM.html" class="no-external">Utilisation de la base de données OpenStreetMap</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance17_OSM.html" class="no-external">Géocodage, extraction de données, routing…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance17_OSM.html" class="no-external">
+<div class="listing-date">
+13 mai 2025
+</div>
+<div class="listing-author">
+Ronan Ysebaert, Louis Laurian, Timothée Giraud
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance17_OSM.html" class="no-external">Utilisation de la base de données OpenStreetMap</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance17_OSM.html" class="no-external">Géocodage, extraction de données, routing…</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance17_OSM.html" class="no-external">
-<div class="listing-date">13 mai 2025</div>
-<div class="listing-author">Ronan Ysebaert, Louis Laurian, Timothée Giraud</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="1" data-categories="bW9kJUMzJUE5bGlzYXRpb24lMkNzdGF0aXN0aXF1ZSUyQ2FuYWx5c2UlMjBzcGF0aWFsZQ==" data-listing-date-sort="1742425200000" data-listing-file-modified-sort="1743169558773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35" data-listing-title-sort="La régression géographiquement pondérée (GWR)">
-
-<div class="thumbnail">
-<a href="./posts/seance16_GWR.html" class="no-external">
+<div class="quarto-post image-right" data-index="1" data-categories="bW9kJUMzJUE5bGlzYXRpb24lMkNzdGF0aXN0aXF1ZSUyQ2FuYWx5c2UlMjBzcGF0aWFsZQ==" data-listing-date-sort="1742425200000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35" data-listing-title-sort="La régression géographiquement pondérée (GWR)">
+<div class="thumbnail"><a href="./posts/seance16_GWR.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/GWR.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance16_GWR.html" class="no-external">La régression géographiquement pondérée (GWR)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance16_GWR.html" class="no-external">Théorie et pratique en R</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance16_GWR.html" class="no-external">
+<div class="listing-date">
+20 mars 2025
+</div>
+<div class="listing-author">
+Thierry Feuillet
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance16_GWR.html" class="no-external">La régression géographiquement pondérée (GWR)</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance16_GWR.html" class="no-external">Théorie et pratique en R</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance16_GWR.html" class="no-external">
-<div class="listing-date">20 mars 2025</div>
-<div class="listing-author">Thierry Feuillet</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="2" data-categories="YW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXUlMkNhbmFseXNlJTIwc3BhdGlhbGU=" data-listing-date-sort="1739746800000" data-listing-file-modified-sort="1743169385249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24" data-listing-title-sort="Analyse de semis de points sur un réseau spatial">
-
-<div class="thumbnail">
-<a href="./posts/seance15_AR_semi_de_points.html" class="no-external">
+<div class="quarto-post image-right" data-index="2" data-categories="YW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXUlMkNhbmFseXNlJTIwc3BhdGlhbGU=" data-listing-date-sort="1739746800000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24" data-listing-title-sort="Analyse de semis de points sur un réseau spatial">
+<div class="thumbnail"><a href="./posts/seance15_AR_semi_de_points.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/graph_network.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance15_AR_semi_de_points.html" class="no-external">Analyse de semis de points sur un réseau spatial</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance15_AR_semi_de_points.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance15_AR_semi_de_points.html" class="no-external">
+<div class="listing-date">
+17 févr. 2025
+</div>
+<div class="listing-author">
+Julie Gravier, Laurent Beauguitte
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance15_AR_semi_de_points.html" class="no-external">Analyse de semis de points sur un réseau spatial</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance15_AR_semi_de_points.html" class="no-external"></a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance15_AR_semi_de_points.html" class="no-external">
-<div class="listing-date">17 févr. 2025</div>
-<div class="listing-author">Julie Gravier, Laurent Beauguitte</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="3" data-categories="d29ya2Zsb3c=" data-listing-date-sort="1737673200000" data-listing-file-modified-sort="1742458637537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="59" data-listing-title-sort="Les mains dans le code">
-
-<div class="thumbnail">
-<a href="./posts/seance14_TR_workflow.html" class="no-external">
+<div class="quarto-post image-right" data-index="3" data-categories="d29ya2Zsb3c=" data-listing-date-sort="1737673200000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="59" data-listing-title-sort="Les mains dans le code">
+<div class="thumbnail"><a href="./posts/seance14_TR_workflow.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/workflows.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance14_TR_workflow.html" class="no-external">Les mains dans le code</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance14_TR_workflow.html" class="no-external">Organisation du travail, bricolage, reproductibilité avec R</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance14_TR_workflow.html" class="no-external">
+<div class="listing-date">
+24 janv. 2025
+</div>
+<div class="listing-author">
+Kim Antunez, Aurélie Douet, Paul Gourdon, Louis Laurian, Julie Pierson, Kevin Poisson, Nicolas Robette, Ronan Ysebaert
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance14_TR_workflow.html" class="no-external">Les mains dans le code</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance14_TR_workflow.html" class="no-external">Organisation du travail, bricolage, reproductibilité avec R</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance14_TR_workflow.html" class="no-external">
-<div class="listing-date">24 janv. 2025</div>
-<div class="listing-author">Kim Antunez, Aurélie Douet, Paul Gourdon, Louis Laurian, Julie Pierson, Kevin Poisson, Nicolas Robette, Ronan Ysebaert</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="4" data-categories="d2ViJTIwc2NyYXBpbmclMkNjb2xsZWN0ZQ==" data-listing-date-sort="1718920800000" data-listing-file-modified-sort="1743169525974" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191" data-listing-title-sort="Premier pas en webscraping">
-
-<div class="thumbnail">
-<a href="./posts/seance13_webscraping.html" class="no-external">
+<div class="quarto-post image-right" data-index="4" data-categories="d2ViJTIwc2NyYXBpbmclMkNjb2xsZWN0ZQ==" data-listing-date-sort="1718920800000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191" data-listing-title-sort="Premier pas en webscraping">
+<div class="thumbnail"><a href="./posts/seance13_webscraping.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/logo4.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance13_webscraping.html" class="no-external">Premier pas en webscraping</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance13_webscraping.html" class="no-external">Initiation au webscraping avec <code>rvest</code></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance13_webscraping.html" class="no-external">
+<div class="listing-date">
+21 juin 2024
+</div>
+<div class="listing-author">
+Alexandre Cebeillac, Léa Christophe, Robin Cura, Hugues Pecout, Sébastien Rey-Coyrehourcq
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance13_webscraping.html" class="no-external">Premier pas en webscraping</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance13_webscraping.html" class="no-external">Initiation au webscraping avec `rvest`</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance13_webscraping.html" class="no-external">
-<div class="listing-date">21 juin 2024</div>
-<div class="listing-author">Alexandre Cebeillac, Léa Christophe, Robin Cura, Hugues Pecout, Sébastien Rey-Coyrehourcq</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="5" data-categories="ZyVDMyVBOW90cmFpdGVtZW50JTJDZ2VvbWF0aXF1ZSUyQ2FuYWx5c2UlMjBzcGF0aWFsZSUyQ3Jhc3Rlcg==" data-listing-date-sort="1716242400000" data-listing-file-modified-sort="1743682367288" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183" data-listing-title-sort="Manipulation de données géographiques en format raster avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance12_raster_terra.html" class="no-external">
+<div class="quarto-post image-right" data-index="5" data-categories="ZyVDMyVBOW90cmFpdGVtZW50JTJDZ2VvbWF0aXF1ZSUyQ2FuYWx5c2UlMjBzcGF0aWFsZSUyQ3Jhc3Rlcg==" data-listing-date-sort="1716242400000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183" data-listing-title-sort="Manipulation de données géographiques en format raster avec R">
+<div class="thumbnail"><a href="./posts/seance12_raster_terra.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/terra.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance12_raster_terra.html" class="no-external">Manipulation de données géographiques en format raster avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance12_raster_terra.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance12_raster_terra.html" class="no-external">
+<div class="listing-date">
+21 mai 2024
+</div>
+<div class="listing-author">
+Malika Madelin, Paul Passy
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance12_raster_terra.html" class="no-external">Manipulation de données géographiques en format raster avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance12_raster_terra.html" class="no-external"></a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance12_raster_terra.html" class="no-external">
-<div class="listing-date">21 mai 2024</div>
-<div class="listing-author">Malika Madelin, Paul Passy</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="6" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1710975600000" data-listing-file-modified-sort="1743682369439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111" data-listing-title-sort="Initiation à la statistique univariée et bivariée avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance11_uni_bivarie.html" class="no-external">
+<div class="quarto-post image-right" data-index="6" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1710975600000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111" data-listing-title-sort="Initiation à la statistique univariée et bivariée avec R">
+<div class="thumbnail"><a href="./posts/seance11_uni_bivarie.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/initR.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance11_uni_bivarie.html" class="no-external">Initiation à la statistique univariée et bivariée avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance11_uni_bivarie.html" class="no-external">Cours pratique</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance11_uni_bivarie.html" class="no-external">
+<div class="listing-date">
+21 mars 2024
+</div>
+<div class="listing-author">
+Sylvestre Duroudier
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance11_uni_bivarie.html" class="no-external">Initiation à la statistique univariée et bivariée avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance11_uni_bivarie.html" class="no-external">Cours pratique</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance11_uni_bivarie.html" class="no-external">
-<div class="listing-date">21 mars 2024</div>
-<div class="listing-author">Sylvestre Duroudier</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="7" data-categories="dGglQzMlQThzZQ==" data-listing-date-sort="1705359600000" data-listing-file-modified-sort="1742458637537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Table ronde">
-
-<div class="thumbnail">
-<a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">
+<div class="quarto-post image-right" data-index="7" data-categories="dGglQzMlQThzZQ==" data-listing-date-sort="1705359600000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Table ronde">
+<div class="thumbnail"><a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/ana_txt.jpg" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">Table ronde</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">Faire de l’analyse textuelle sur R : pourquoi et comment ?</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">
+<div class="listing-date">
+16 janv. 2024
+</div>
+<div class="listing-author">
+Léa Christophe, Robin Cura, Camille Dabestani, Megane Fernandez, Paul Gourdon, Romain Leconte, Anne-Cécile Ott, Etienne Toureille
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">Table ronde</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">Faire de l'analyse textuelle sur R : pourquoi et comment ?</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance10_table_ronde_analyse_textuelle.html" class="no-external">
-<div class="listing-date">16 janv. 2024</div>
-<div class="listing-author">Léa Christophe, Robin Cura, Camille Dabestani, Megane Fernandez, Paul Gourdon, Romain Leconte, Anne-Cécile Ott, Etienne Toureille</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="8" data-categories="dGglQzMlQThzZQ==" data-listing-date-sort="1699916400000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183" data-listing-title-sort="R au long cours">
-
-<div class="thumbnail">
-<a href="./posts/seance9_R_et_these.html" class="no-external">
+<div class="quarto-post image-right" data-index="8" data-categories="dGglQzMlQThzZQ==" data-listing-date-sort="1699916400000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183" data-listing-title-sort="R au long cours">
+<div class="thumbnail"><a href="./posts/seance9_R_et_these.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/R_these2.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance9_R_et_these.html" class="no-external">R au long cours</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance9_R_et_these.html" class="no-external">Trois années de thèse avec R en géographie</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance9_R_et_these.html" class="no-external">
+<div class="listing-date">
+14 nov. 2023
+</div>
+<div class="listing-author">
+Maxime Guinepain
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance9_R_et_these.html" class="no-external">R au long cours</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance9_R_et_these.html" class="no-external">Trois années de thèse avec R en géographie</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance9_R_et_these.html" class="no-external">
-<div class="listing-date">14 nov. 2023</div>
-<div class="listing-author">Maxime Guinepain</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="9" data-categories="bm90ZWJvb2slMkNkb2N1bWVudCUyMGNvbXV0YXRpb25uZWwlMkNxdWFydG8lMkNyZXByb2R1Y3RpYmlsaXQlQzMlQTk=" data-listing-date-sort="1696284000000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="201" data-listing-title-sort="Document computationnel avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance8_quarto.html" class="no-external">
+<div class="quarto-post image-right" data-index="9" data-categories="bm90ZWJvb2slMkNkb2N1bWVudCUyMGNvbXV0YXRpb25uZWwlMkNxdWFydG8lMkNyZXByb2R1Y3RpYmlsaXQlQzMlQTk=" data-listing-date-sort="1696284000000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="201" data-listing-title-sort="Document computationnel avec R">
+<div class="thumbnail"><a href="./posts/seance8_quarto.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/quarto.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance8_quarto.html" class="no-external">Document computationnel avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance8_quarto.html" class="no-external">Pour le partage et la reproductibilité de ses analyses</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance8_quarto.html" class="no-external">
+<div class="listing-date">
+3 oct. 2023
+</div>
+<div class="listing-author">
+Hugues Pecout
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance8_quarto.html" class="no-external">Document computationnel avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance8_quarto.html" class="no-external">Pour le partage et la reproductibilité de ses analyses</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance8_quarto.html" class="no-external">
-<div class="listing-date">3 oct. 2023</div>
-<div class="listing-author">Hugues Pecout</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="10" data-categories="aWdyYXBoJTJDYW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXU=" data-listing-date-sort="1684792800000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="123" data-listing-title-sort="Introduction à l’analyse de réseau avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance7_igraph.html" class="no-external">
+<div class="quarto-post image-right" data-index="10" data-categories="aWdyYXBoJTJDYW5hbHlzZSUyMGRlJTIwciVDMyVBOXNlYXU=" data-listing-date-sort="1684792800000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="123" data-listing-title-sort="Introduction à l’analyse de réseau avec R">
+<div class="thumbnail"><a href="./posts/seance7_igraph.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/igraph.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance7_igraph.html" class="no-external">Introduction à l’analyse de réseau avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance7_igraph.html" class="no-external">Analyse de réseau avec <code>igraph</code></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance7_igraph.html" class="no-external">
+<div class="listing-date">
+23 mai 2023
+</div>
+<div class="listing-author">
+Laurent Beauguitte, Megane Fernandez, Hugues Pecout
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance7_igraph.html" class="no-external">Introduction à l’analyse de réseau avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance7_igraph.html" class="no-external">Analyse de réseau avec `igraph`</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance7_igraph.html" class="no-external">
-<div class="listing-date">23 mai 2023</div>
-<div class="listing-author">Laurent Beauguitte, Megane Fernandez, Hugues Pecout</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="11" data-categories="Z2VvbWF0aXF1ZSUyQ3NmJTJDaW5mb3JtYXRpb24lMjBnJUMzJUE5b2dyYXBoaXF1ZSUyQ2clQzMlQTlvdHJhaXRlbWVudCUyQ2FuYWx5c2UlMjBzcGF0aWFsZQ==" data-listing-date-sort="1682028000000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Géomatique avec R (I)">
-
-<div class="thumbnail">
-<a href="./posts/seance6_geomatique_sf.html" class="no-external">
+<div class="quarto-post image-right" data-index="11" data-categories="Z2VvbWF0aXF1ZSUyQ3NmJTJDaW5mb3JtYXRpb24lMjBnJUMzJUE5b2dyYXBoaXF1ZSUyQ2clQzMlQTlvdHJhaXRlbWVudCUyQ2FuYWx5c2UlMjBzcGF0aWFsZQ==" data-listing-date-sort="1682028000000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Géomatique avec R (I)">
+<div class="thumbnail"><a href="./posts/seance6_geomatique_sf.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/geom_sf.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance6_geomatique_sf.html" class="no-external">Géomatique avec R (I)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance6_geomatique_sf.html" class="no-external">Manipulation de données vectorielles avec <code>sf</code></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance6_geomatique_sf.html" class="no-external">
+<div class="listing-date">
+21 avr. 2023
+</div>
+<div class="listing-author">
+Hugues Pecout, Timothée Giraud
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance6_geomatique_sf.html" class="no-external">Géomatique avec R (I)</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance6_geomatique_sf.html" class="no-external">Manipulation de données vectorielles avec `sf`</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance6_geomatique_sf.html" class="no-external">
-<div class="listing-date">21 avr. 2023</div>
-<div class="listing-author">Hugues Pecout, Timothée Giraud</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="12" data-categories="Y2FydG9ncmFwaGllJTJDbWFwc2YlMkNpbmZvcm1hdGlvbiUyMGclQzMlQTlvZ3JhcGhpcXVl" data-listing-date-sort="1679868000000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="200" data-listing-title-sort="Cartographie avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance5_carto_mapsf.html" class="no-external">
+<div class="quarto-post image-right" data-index="12" data-categories="Y2FydG9ncmFwaGllJTJDbWFwc2YlMkNpbmZvcm1hdGlvbiUyMGclQzMlQTlvZ3JhcGhpcXVl" data-listing-date-sort="1679868000000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="200" data-listing-title-sort="Cartographie avec R">
+<div class="thumbnail"><a href="./posts/seance5_carto_mapsf.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/carto_mapsf.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance5_carto_mapsf.html" class="no-external">Cartographie avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance5_carto_mapsf.html" class="no-external">Produire des cartes thématiques avec le package <code>mapsf</code></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance5_carto_mapsf.html" class="no-external">
+<div class="listing-date">
+27 mars 2023
+</div>
+<div class="listing-author">
+Hugues Pecout, Timothée Giraud
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance5_carto_mapsf.html" class="no-external">Cartographie avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance5_carto_mapsf.html" class="no-external">Produire des cartes thématiques avec le package `mapsf`</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance5_carto_mapsf.html" class="no-external">
-<div class="listing-date">27 mars 2023</div>
-<div class="listing-author">Hugues Pecout, Timothée Giraud</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="13" data-categories="ZW5xdSVDMyVBQXRlJTJDZ3JhcGhpcXVlJTJDc3RhdGlzdGlxdWU=" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1742458637510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="219" data-listing-title-sort="Atelier pratique">
-
-<div class="thumbnail">
-<a href="./posts/atelier_enquete_sncf.html" class="no-external">
+<div class="quarto-post image-right" data-index="13" data-categories="ZW5xdSVDMyVBQXRlJTJDZ3JhcGhpcXVlJTJDc3RhdGlzdGlxdWU=" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1747210194240" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="219" data-listing-title-sort="Atelier pratique">
+<div class="thumbnail"><a href="./posts/atelier_enquete_sncf.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/enquete_sncf.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/atelier_enquete_sncf.html" class="no-external">Atelier pratique</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/atelier_enquete_sncf.html" class="no-external">Manipulation et traitement de données d’enquête voyageurs SNCF</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/atelier_enquete_sncf.html" class="no-external">
+<div class="listing-date">
+14 févr. 2023
+</div>
+<div class="listing-author">
+Marion Albertelli, Joséphin Béraud
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/atelier_enquete_sncf.html" class="no-external">Atelier pratique</a></h3>
-<div class="listing-subtitle"><a href="./posts/atelier_enquete_sncf.html" class="no-external">Manipulation et traitement de données d'enquête voyageurs SNCF</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/atelier_enquete_sncf.html" class="no-external">
-<div class="listing-date">14 févr. 2023</div>
-<div class="listing-author">Marion Albertelli, Joséphin Béraud</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="14" data-categories="Z3JhcGhpcXVlJTJDZ2dwbG90Mg==" data-listing-date-sort="1674601200000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191" data-listing-title-sort="Représentation graphique avec R">
-
-<div class="thumbnail">
-<a href="./posts/seance4_ggplot.html" class="no-external">
+<div class="quarto-post image-right" data-index="14" data-categories="Z3JhcGhpcXVlJTJDZ2dwbG90Mg==" data-listing-date-sort="1674601200000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191" data-listing-title-sort="Représentation graphique avec R">
+<div class="thumbnail"><a href="./posts/seance4_ggplot.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/ggplot.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance4_ggplot.html" class="no-external">Représentation graphique avec R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance4_ggplot.html" class="no-external">ggplot2 et la grammaire graphique</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance4_ggplot.html" class="no-external">
+<div class="listing-date">
+25 janv. 2023
+</div>
+<div class="listing-author">
+Léa Christophe, Robin Cura
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance4_ggplot.html" class="no-external">Représentation graphique avec R</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance4_ggplot.html" class="no-external">ggplot2 et la grammaire graphique</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance4_ggplot.html" class="no-external">
-<div class="listing-date">25 janv. 2023</div>
-<div class="listing-author">Léa Christophe, Robin Cura</div>
+<div class="quarto-post image-right" data-index="15" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1671145200000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136" data-listing-title-sort="Initiation à R (2)">
+<div class="thumbnail"><a href="./posts/seance3.html" class="no-external">
+
+<img loading="lazy" src="./posts/img/initR.png" class="thumbnail-image" style="height: 125px;">
 
 </a></div>
-
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance3.html" class="no-external">Initiation à R (2)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance3.html" class="no-external">Atelier pratique d’introduction</a>
 </div>
-
-<div class="quarto-post image-right" data-index="15" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1671145200000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136" data-listing-title-sort="Initiation à R (2)">
-
-<div class="thumbnail">
+</div>
+<div class="metadata">
 <a href="./posts/seance3.html" class="no-external">
+<div class="listing-date">
+16 déc. 2022
+</div>
+<div class="listing-author">
+Joséphin Béraud, Léa Christophe, Aurelie Douet
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1669935600000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147" data-listing-title-sort="Initiation à R (1)">
+<div class="thumbnail"><a href="./posts/seance2.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/initR.png" class="thumbnail-image" style="height: 125px;">
 
-</a>
-</div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance3.html" class="no-external">Initiation à R (2)</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance3.html" class="no-external">Atelier pratique d'introduction</a></div>
-
- 
-
-</div>
-<div class="metadata"><a href="./posts/seance3.html" class="no-external">
-<div class="listing-date">16 déc. 2022</div>
-<div class="listing-author">Joséphin Béraud, Léa Christophe, Aurelie Douet</div>
-
 </a></div>
-
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance2.html" class="no-external">Initiation à R (1)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance2.html" class="no-external">Cours théorique d’introduction</a>
 </div>
-
-<div class="quarto-post image-right" data-index="16" data-categories="aW5pdGlhdGlvbg==" data-listing-date-sort="1669935600000" data-listing-file-modified-sort="1742458637538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147" data-listing-title-sort="Initiation à R (1)">
-
-<div class="thumbnail">
+</div>
+<div class="metadata">
 <a href="./posts/seance2.html" class="no-external">
-
-<img loading="lazy" src="./posts/img/initR.png" class="thumbnail-image" style="height: 125px;">
-
+<div class="listing-date">
+2 déc. 2022
+</div>
+<div class="listing-author">
+Joséphin Béraud, Léa Christophe, Aurelie Douet
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance2.html" class="no-external">Initiation à R (1)</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance2.html" class="no-external">Cours théorique d'introduction</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance2.html" class="no-external">
-<div class="listing-date">2 déc. 2022</div>
-<div class="listing-author">Joséphin Béraud, Léa Christophe, Aurelie Douet</div>
-
-</a></div>
-
-</div>
-
-<div class="quarto-post image-right" data-index="17" data-categories="aW50cm9kdWN0aW9u" data-listing-date-sort="1665698400000" data-listing-file-modified-sort="1742458637537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="276" data-listing-title-sort="Séance introductive">
-
-<div class="thumbnail">
-<a href="./posts/seance1.html" class="no-external">
+<div class="quarto-post image-right" data-index="17" data-categories="aW50cm9kdWN0aW9u" data-listing-date-sort="1665698400000" data-listing-file-modified-sort="1747210194268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="276" data-listing-title-sort="Séance introductive">
+<div class="thumbnail"><a href="./posts/seance1.html" class="no-external">
 
 <img loading="lazy" src="./posts/img/logo_ElementR.png" class="thumbnail-image" style="height: 125px;">
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/seance1.html" class="no-external">Séance introductive</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/seance1.html" class="no-external">Historique et objectifs d’ElementR &amp; présentation du langage R</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/seance1.html" class="no-external">
+<div class="listing-date">
+14 oct. 2022
+</div>
+<div class="listing-author">
+Hadrien Commenges, Robin Cura, Hugues Pecout, Timothée Giraud
+</div>
 </a>
 </div>
-
-<div class="body">
-
-<h3 class="no-anchor listing-title"><a href="./posts/seance1.html" class="no-external">Séance introductive</a></h3>
-<div class="listing-subtitle"><a href="./posts/seance1.html" class="no-external">Historique et objectifs d'ElementR &amp; présentation du langage R</a></div>
-
- 
-
 </div>
-<div class="metadata"><a href="./posts/seance1.html" class="no-external">
-<div class="listing-date">14 oct. 2022</div>
-<div class="listing-author">Hadrien Commenges, Robin Cura, Hugues Pecout, Timothée Giraud</div>
-
-</a></div>
-
 </div>
-
-</div>
-<div class="listing-no-matching d-none">
-Aucun article correspondant
-</div>
+<div class="listing-no-matching d-none">Aucun article correspondant</div>
 </div>
 <p><br>
 </p>
@@ -941,380 +1086,255 @@ Plus de ressources ?
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/elementr\.gitpages\.huma-num\.fr\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
       });
     }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copié");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copié");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/elementr\.gitpages\.huma-num\.fr\/website\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        return container.innerHTML
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1322,185 +1342,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

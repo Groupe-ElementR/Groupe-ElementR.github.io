@@ -56,7 +56,7 @@ ElementR est un groupe qui fédère trois unités de recherche en géographie : 
 :::
 
 ::: {.column width="29%"}
-<img src="img/riate.png" width="72%;" style="margin-top:35px;"/>
+<img src="img/riate.svg" width="72%;" style="margin-top:35px;"/>
 :::
 ::::::
 :::::::
