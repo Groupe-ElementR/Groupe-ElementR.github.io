@@ -67,6 +67,8 @@ website:
             text: L’autocorrélation spatiale multivariée (`adespatial`)
           - href: posts/seance21_packagesR.qmd
             text: Création de packages
+          - href: posts/seance22_reseaux_bimodaux.qmd
+            text: Analyser un réseau bimodal avec R
       - text: "---"
       - section: "<b>Tables rondes</b>"
         contents: 

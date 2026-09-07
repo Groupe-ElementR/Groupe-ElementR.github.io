@@ -9,9 +9,12 @@ toc: false
 
 </iframe>
 
-<!-- ### Séances à venir : -->
+### Séances à venir :
 
-
+- **13 Octobre 2026, 14h00-16h30 - Analyser un réseau bimodal avec R **\
+  - <u>Format</u> : Présentiel uniquement\
+  - <u>Inscription</u> : à venir
+  - <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance22_reseaux_bimodaux.qmd)\
 
 <!-- ::: panel-tabset -->
 
