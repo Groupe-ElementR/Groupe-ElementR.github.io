@@ -6,12 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Hadrien Commenges">
-<meta name="author" content="Robin Cura">
-<meta name="author" content="Hugues Pecout">
-<meta name="author" content="Timothée Giraud">
+<meta name="author" content="Laurent Beauguitte">
+<meta name="author" content="Paul Gourdon">
 
-<title>Séance introductive – ElementR</title>
+<title>Réseau bimodal – ElementR</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,27 +28,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -120,11 +98,9 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Séance introductive – ElementR">
-<meta name="twitter:description" content="Historique et objectifs d’ElementR &amp; présentation du langage R">
-<meta name="twitter:image" content="https://elementr.gitpages.huma-num.fr/website/posts/img/logo_ElementR.png">
-<meta name="twitter:image-height" content="175">
-<meta name="twitter:image-width" content="546">
+<meta name="twitter:title" content="Réseau bimodal – ElementR">
+<meta name="twitter:description" content="Site web du groupe d’utilisateur·rice·s ElementR">
+<meta name="twitter:image" content="https://elementr.gitpages.huma-num.fr/website/posts/img/bipartite.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -338,7 +314,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/seance1.html"><b>Séances thématiques</b></a></li><li class="breadcrumb-item"><a href="../posts/seance1.html">Introduction ElementR</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/seance1.html"><b>Séances thématiques</b></a></li><li class="breadcrumb-item"><a href="../posts/seance22_reseau_bimodal.html">Réseau bimodal (bipartite)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -368,7 +344,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/seance1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../posts/seance1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction ElementR</span></a>
   </div>
 </li>
@@ -464,7 +440,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/seance22_reseau_bimodal.html" class="sidebar-item-text sidebar-link">
+  <a href="../posts/seance22_reseau_bimodal.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Réseau bimodal (bipartite)</span></a>
   </div>
 </li>
@@ -560,151 +536,78 @@ div.csl-indent {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Sur cette page</h2>
   <ul>
-  <li><a href="#supports-de-présentation" id="toc-supports-de-présentation" class="nav-link active" data-scroll-target="#supports-de-présentation">Supports de présentation</a></li>
+  <li><a href="#inscription" id="toc-inscription" class="nav-link active" data-scroll-target="#inscription">Inscription</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">Résumé</a></li>
+  <li><a href="#pré-requis" id="toc-pré-requis" class="nav-link" data-scroll-target="#pré-requis">Pré-requis</a></li>
+  <li><a href="#outillage" id="toc-outillage" class="nav-link" data-scroll-target="#outillage">Outillage</a></li>
+  <li><a href="#supports" id="toc-supports" class="nav-link" data-scroll-target="#supports">Supports</a></li>
+  <li><a href="#script-et-données" id="toc-script-et-données" class="nav-link" data-scroll-target="#script-et-données">Script et données</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <div class="quarto-about-marquee column-body">
   <div class="about-image-container">
-    <img src="img/logo_ElementR.png" class="about-image
-  rounded " style="width: 35em;">
+    <img src="img/bipartite.svg" class="about-image
+  rounded " style="width: 15em;">
   </div>
   <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/seance1.html"><b>Séances thématiques</b></a></li><li class="breadcrumb-item"><a href="../posts/seance1.html">Introduction ElementR</a></li></ol></nav>
+    <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/seance1.html"><b>Séances thématiques</b></a></li><li class="breadcrumb-item"><a href="../posts/seance22_reseau_bimodal.html">Réseau bimodal (bipartite)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Séance introductive</h1>
-<p class="subtitle lead">Historique et objectifs d’ElementR &amp; présentation du langage R</p>
+<h1 class="title">Réseau bimodal</h1>
   </div>
 <div class="quarto-title-meta column-body">
     <div>
     <div class="quarto-title-meta-heading">Auteurs</div>
     <div class="quarto-title-meta-contents">
-             <p>Hadrien Commenges <a href="https://orcid.org/0000-0003-0277-263X" class="quarto-title-author-orcid" aria-label="ORCID profile for Hadrien Commenges"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Robin Cura <a href="https://orcid.org/0000-0001-5926-1828" class="quarto-title-author-orcid" aria-label="ORCID profile for Robin Cura"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Hugues Pecout <a href="https://orcid.org/0000-0002-0246-0954" class="quarto-title-author-orcid" aria-label="ORCID profile for Hugues Pecout"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Timothée Giraud <a href="https://orcid.org/0000-0002-1932-3323" class="quarto-title-author-orcid" aria-label="ORCID profile for Timothée Giraud"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Laurent Beauguitte <a href="https://orcid.org/https://orcid.org/0000-0001-8803-6056" class="quarto-title-author-orcid" aria-label="ORCID profile for Laurent Beauguitte"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Paul Gourdon <a href="https://orcid.org/https://orcid.org/0009-0008-7303-8583" class="quarto-title-author-orcid" aria-label="ORCID profile for Paul Gourdon"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
   </div>
     <div>
     <div class="quarto-title-meta-heading">Date de séance</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">14 octobre 2022</p>
+      <p class="date">13 octobre 2026</p>
     </div>
   </div>
   </div>
 </header> <main class="content column-body" id="quarto-document-content">
 
 
-<p>Plus de dix ans après sa création, le groupe ElementR relance une nouvelle vague de formation collective au traitement de l’information géographique avec R. Le périmètre de ce groupe d’utilisateur·rice·s s’est élargi, le groupe fédère désormais des membres de l’UMR <a href="https://geographie-cites.cnrs.fr/">Géographie-Cités</a>, de l’UMR <a href="https://www.prodig.cnrs.fr/">PRODIG</a> et de l’UAR <a href="https://riate.cnrs.fr/">RIATE</a>.</p>
-<p>Cette séance a été l’occasion de présenter l’historique d’ElementR, et d’échanger sur les modalités de fonctionnement et les futures activités du groupe. La seconde partie de la séance a été consacrée à une présentation de R et des fonctionnalités proposées par ce langage en matière de traitement de l’information géographique.</p>
-<p><strong>Plan de séance :</strong></p>
-<ol type="1">
-<li>Historique et bilan du groupe ElementR</li>
-<li>Objectifs, fonctionnement et activités envisagés (discussion)</li>
-<li>Présentation et contextualisation de R et Rstudio</li>
-<li>L’écosystème spatial de R</li>
-</ol>
-<section id="supports-de-présentation" class="level3">
-<h3 data-anchor-id="supports-de-présentation">Supports de présentation</h3>
-<section id="historique-et-bilan-delementr" class="level4">
-<h4 data-anchor-id="historique-et-bilan-delementr">1. Historique et bilan d’ElementR</h4>
-<div class="columns">
-<div class="column" style="width:70%;">
-<object class="slide" data="support/elementr_historique.pdf" type="application/pdf">
-<iframe src="https://docs.google.com/viewer?url=your_url_to_pdf&amp;embedded=true">
-</iframe>
-</object>
-</div><div class="column" style="width:30%;">
-<ul class="metaslide">
-<ul>
-<li><i class="bi bi-person-fill"> <strong>Hadrien Commenges</strong></i></li>
-<li><i class="bi bi-file-earmark-slides"></i> Diaporama en <a href="support/elementr_historique.pdf">plein écran</a><br>
-</li>
-</ul>
-</ul>
-</div>
-</div>
+<section id="inscription" class="level3">
+<h3 data-anchor-id="inscription">Inscription</h3>
+<p>Pour participer à cette séance qui se déroulera en <strong>salle 1.122</strong> (bâtiment sud, Campus Condorcet), <strong>merci de vous inscrire</strong> via ce <a href="https://evento.renater.fr/survey/elementr-analyse-de-resau-bimodal-bipartite-oo2w3v8r"><strong>formulaire</strong></a></p>
 </section>
-<section id="nouvelle-vague-elementr" class="level4">
-<h4 data-anchor-id="nouvelle-vague-elementr">2. Nouvelle vague ElementR</h4>
-<div class="columns">
-<div class="column" style="width:70%;">
-<iframe class="slide" src="https://elementr.gitpages.huma-num.fr/session_1/groupe_elementr/#/title-slide">
-</iframe>
-</div><div class="column" style="width:30%;">
-<ul class="metaslide">
-<ul>
-<li><i class="bi bi-person-fill"> <strong>Robin Cura</strong></i></li>
-<li><i class="bi bi-file-earmark-slides"></i> Diaporama en <a href="https://elementr.gitpages.huma-num.fr/session_1/groupe_elementr/#/title-slide">plein écran</a><br>
-</li>
-<li><i class="bi bi-github"></i> Code source sur <a href="https://gitlab.huma-num.fr/elementr/session_1/groupe_elementr">GitLab</a></li>
-</ul>
-</ul>
-</div>
-</div>
+<section id="résumé" class="level3">
+<h3 data-anchor-id="résumé">Résumé</h3>
+<p>La séance ElementR du <strong>13 octobre (14h)</strong> sera consacrée à l’analyse de réseau bimodal soit un réseau de liens entre deux types de sommets. De nombreuses données peuvent être modélisées de cette façon (artistes -&gt; labels, chercheuses -&gt; projets, autrices -&gt; revues, etc.). Après avoir défini le vocabulaire de base, nous présenterons les différentes possibilités offertes par la suite de packages <a href="https://github.com/stocnet">stocnet</a> avec les données du Southern Woman Dataset (participation de femmes à des réunions). Nous présenterons également le package <a href="https://cran.r-project.org/web/packages/bipartite/index.html"><code>bipartite</code></a>. Les méthodes abordées concernent la qualification du réseau, la mesure des centralités, la détection de motifs et les partitions (liste non exhaustive). Les options permettant de créer des réseaux unimodaux à partir d’un réseau bimodal seront abordées avant une série d’exercices sur des données relatives aux coopérations entre villes européennes, données issues de la thèse de Paul Gourdon.</p>
 </section>
-<section id="présentation-et-contextualisation-de-r-et-rstudio" class="level4">
-<h4 data-anchor-id="présentation-et-contextualisation-de-r-et-rstudio">3. Présentation et contextualisation de R et Rstudio</h4>
-<div class="columns">
-<div class="column" style="width:70%;">
-<iframe class="slide" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
-</iframe>
-</div><div class="column" style="width:30%;">
-<ul class="metaslide">
-<ul>
-<li><i class="bi bi-person-fill"> <strong>Hugues Pecout</strong></i></li>
-<li><i class="bi bi-file-earmark-slides"></i> Diaporama en <a href="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">plein écran</a><br>
-</li>
-<li><i class="bi bi-github"></i> Code source sur <a href="https://gitlab.huma-num.fr/elementr/session_1/Presentation_R">GitLab</a></li>
-</ul>
-</ul>
-</div>
-</div>
+<section id="pré-requis" class="level3">
+<h3 data-anchor-id="pré-requis">Pré-requis</h3>
+<p>Aucune connaissance en analyse de réseau n’est nécessaire pour suivre la séance.</p>
 </section>
-<section id="lécosystème-spatial-de-r" class="level4">
-<h4 data-anchor-id="lécosystème-spatial-de-r">4. L’écosystème spatial de R</h4>
-<div class="columns">
-<div class="column" style="width:70%;">
-<iframe class="slide" src="https://elementr.gitpages.huma-num.fr/session_1/rspatial/#/title-slide">
-</iframe>
-</div><div class="column" style="width:30%;">
-<ul class="metaslide">
+<section id="outillage" class="level3">
+<h3 data-anchor-id="outillage">Outillage</h3>
+<p>Principaux packages utilisés : <a href="https://r.igraph.org/"><code>igraph</code></a>, <a href="https://stocnet.github.io/manynet/"><code>manynet</code></a>, <a href="https://stocnet.github.io/netrics/"><code>netrics</code></a>, <a href="https://cran.r-project.org/web/packages/bipartite/index.html"><code>bipartite</code></a></p>
+</section>
+<section id="supports" class="level3">
+<h3 data-anchor-id="supports">Supports</h3>
 <ul>
-<li><i class="bi bi-person-fill"> <strong>Timothée Giraud</strong></i></li>
-<li><i class="bi bi-file-earmark-slides"></i> Diaporama en <a href="https://elementr.gitpages.huma-num.fr/session_1/rspatial/#/title-slide">plein écran</a></li>
-<li><i class="bi bi-github"></i> Code source sur <a href="https://gitlab.huma-num.fr/elementr/session_1/rspatial">GitLab</a></li>
+<li><a href="#">A venir</a></li>
 </ul>
+</section>
+<section id="script-et-données" class="level3">
+<h3 data-anchor-id="script-et-données">Script et données</h3>
+<ul>
+<li><a href="#">A venir</a></li>
 </ul>
-</div>
-</div>
-<p><br>
-</p>
-<section id="bibliographie" class="level5">
-<h5 data-anchor-id="bibliographie">Bibliographie</h5>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-elementr" class="csl-entry" role="listitem">
-ElementR. 2014. <em>R et espace. Traitement de l’information géographique</em>. Framabook. Disponible sur: <a href="https://archives.framabook.org/r-et-espace/">https://archives.framabook.org/r-et-espace/</a>
-</div>
-<div id="ref-geo_avec_r" class="csl-entry" role="listitem">
-Giraud T, Pecout H. 2022. Géomatique avec <span>R</span> Disponible sur: <a href="https://rcarto.github.io/geomatique_avec_r/">https://rcarto.github.io/geomatique_avec_r/</a>
-</div>
-<div id="ref-geocomputationR" class="csl-entry" role="listitem">
-Lovelace R, Nowosad J, Muenchow J. 2019. <em>Geocomputation with R</em>. DOI: <a href="https://doi.org/10.1201/9780203730058">10.1201/9780203730058</a>
-</div>
-<div id="ref-revo" class="csl-entry" role="listitem">
-Smith D. 2017. An Updated History of <span>R</span> Disponible sur: <a href="https://blog.revolutionanalytics.com/2017/10/updated-history-of-r.html">https://blog.revolutionanalytics.com/2017/10/updated-history-of-r.html</a>
-</div>
-</div>
 
 
-</section>
-</section>
 </section>
 </main> 
     <div class="about-footer"><div class="about-links">
-  <a href="https://gitlab.huma-num.fr/elementr/session_1" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
+  <a href="https://gitlab.huma-num.fr/elementr/website/-/blob/main/posts/seance22_reseau_bimodal.qmd" class="about-link" rel="" target="">
+    <i class="bi bi-git"></i>
      <span class="about-link-text">GitLab</span>
   </a>
 </div>

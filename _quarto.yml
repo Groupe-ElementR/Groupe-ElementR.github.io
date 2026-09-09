@@ -3,10 +3,11 @@ project:
 lang: fr
 website:
   title: "ElementR"
-  favicon: img/ElementR.png
-  twitter-card: true
-  site-url: https://elementr.gitpages.huma-num.fr/website/
+  favicon: img/ElementR.png  
+  twitter-card: true   
+  site-url: https://elementr.gitpages.huma-num.fr/website/    
   description: "Site web du groupe d’utilisateur·rice·s ElementR"
+
   page-navigation: false
   search: 
     location: navbar
@@ -67,8 +68,9 @@ website:
             text: L’autocorrélation spatiale multivariée (`adespatial`)
           - href: posts/seance21_packagesR.qmd
             text: Création de packages
-          - href: posts/seance22_reseaux_bimodaux.qmd
-            text: Analyser un réseau bimodal avec R
+          - href: posts/seance22_reseau_bimodal.qmd
+            text: Réseau bimodal (bipartite)
+
       - text: "---"
       - section: "<b>Tables rondes</b>"
         contents: 
