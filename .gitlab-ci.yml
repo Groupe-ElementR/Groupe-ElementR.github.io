@@ -1,6 +1,14 @@
 default:
   image: gitlab.huma-num.fr:7443/rcarto/quartocker:20250612
 
+before_script:
+  - git config --global user.email "$CB_EMAIL"
+  - git config --global user.name "CI Website Builder"
+
+stages:
+- deploy
+- pushToCodeberg
+
 create-pages:
   stage: deploy
   environment: production
@@ -13,3 +21,17 @@ create-pages:
     - mkdir public
     - mv _site/* public/
 
+
+# Piqué/adapté depuis https://gitlab.huma-num.fr/geographie-cites/transverslite_dphn/site by @mbunel
+push:
+  stage: pushToCodeberg
+  script:
+    - git clone -b main https://codeberg.org/elementr/pages.git
+    - cp -R public/. pages/
+    - cd pages/
+    - git remote set-url origin https://$CB_TOKEN@codeberg.org/dphn/pages.git
+    - git add --all
+    - git commit -m "MaJ site ($( date +"%d.%m.%Y %Z" )) [SKIP CI]"
+    - git push
+  only:
+    - main
