@@ -1,0 +1,57 @@
+---
+title: "Cartographie sous R"
+date: 11 12 2026
+bibliography: biblio/session22.bib
+nocite: '@*'
+csl: geo.csl
+author: 
+  - name: Timothée Giraud
+    orcid: 0000-0002-1932-3323
+    roles: author
+  - name: Matthieu Viry
+    orcid: 0000-0002-0693-8556
+    roles: author
+  - name: Nicolas Lambert
+    orcid: 0000-0003-4976-6560
+    roles: author
+
+image: img/carte.png
+about:
+  template: marquee
+  image: img/carte.png
+  image-width: 15em
+  image-shape: rounded
+  links:
+    - icon: git
+      text: GitLab
+      href: https://gitlab.huma-num.fr/elementr/website/-/blob/main/posts/seance23_cartographie_riate.qmd
+categories: 
+    - cartographie
+published-title: Date de séance
+author-title: Auteurs
+title-block-categories: false
+---
+
+### Inscription
+
+* [A venir](#)
+
+### Résumé 
+
+* [A venir](#)
+
+### Pré-requis
+
+* [A venir](#)
+
+### Outillage
+
+* [A venir](#)
+
+### Supports
+
+* [A venir](#)
+
+### Script et données
+
+* [A venir](#)
