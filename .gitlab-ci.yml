@@ -29,7 +29,7 @@ push:
     - git clone https://codeberg.org/elementr/pages.git
     - cp -R public/. pages/
     - cd pages/
-    - git remote set-url origin https://$CB_TOKEN@codeberg.org/dphn/pages.git
+    - git remote set-url origin https://$CB_TOKEN@codeberg.org/elementr/pages.git
     - git add --all
     - git commit -m "MaJ site ($( date +"%d.%m.%Y %Z" )) [SKIP CI]"
     - git push
