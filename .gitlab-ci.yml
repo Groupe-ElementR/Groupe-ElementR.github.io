@@ -6,8 +6,8 @@ before_script:
   - git config --global user.name "CI Website Builder"
 
 stages:
-- deploy
-- pushToCodeberg
+  - deploy
+  - pushToCodeberg
 
 create-pages:
   stage: deploy
