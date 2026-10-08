@@ -26,7 +26,7 @@ create-pages:
 push:
   stage: pushToCodeberg
   script:
-    - git clone -b main https://codeberg.org/elementr/pages.git
+    - git clone https://codeberg.org/elementr/pages.git
     - cp -R public/. pages/
     - cd pages/
     - git remote set-url origin https://$CB_TOKEN@codeberg.org/dphn/pages.git
