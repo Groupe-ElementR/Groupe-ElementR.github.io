@@ -31,32 +31,25 @@ title-block-categories: false
 ---
 
 ### Inscription
-Pour participer à cette séance qui se déroulera en **salle 1.122** (bâtiment sud, Campus Condorcet), **merci de vous inscrire** via ce [**formulaire**](https://evento.renater.fr/survey/elementr-analyse-de-resau-bimodal-bipartite-oo2w3v8r).
 
+Pour participer à cette séance qui se déroulera en ~~salle 1.122 (bâtiment sud, Campus Condorcet), merci de vous inscrire via ce [**formulaire**](https://evento.renater.fr/survey/elementr-analyse-de-resau-bimodal-bipartite-oo2w3v8r).~~
 
+### Résumé
 
-### Résumé 
+La séance ElementR du ~~13 octobre (14h)~~ sera consacrée à l'analyse de réseau bimodal soit un réseau de liens entre deux types de sommets. De nombreuses données peuvent être modélisées de cette façon (artistes -\> labels, chercheuses -\> projets, autrices -\> revues, etc.). Après avoir défini le vocabulaire de base, nous présenterons les différentes possibilités offertes par la suite de packages [stocnet](https://github.com/stocnet) avec les données du Southern Woman Dataset (participation de femmes à des réunions). Nous présenterons également le package [`bipartite`](https://cran.r-project.org/web/packages/bipartite/index.html). Les méthodes abordées concernent la qualification du réseau, la mesure des centralités, la détection de motifs et les partitions (liste non exhaustive). Les options permettant de créer des réseaux unimodaux à partir d'un réseau bimodal seront abordées avant une série d'exercices sur des données relatives aux coopérations entre villes européennes, données issues de la thèse de Paul Gourdon.
 
-La séance ElementR du **13 octobre (14h)** sera consacrée à l'analyse de réseau bimodal soit un réseau de liens entre deux types de sommets.
-De nombreuses données peuvent être modélisées de cette façon (artistes -> labels, chercheuses -> projets, autrices -> revues, etc.).
-Après avoir défini le vocabulaire de base, nous présenterons les différentes possibilités offertes par la suite de packages [stocnet](https://github.com/stocnet) avec les données du Southern Woman Dataset (participation de femmes à des réunions).
-Nous présenterons également le package [`bipartite`](https://cran.r-project.org/web/packages/bipartite/index.html).
-Les méthodes abordées concernent la qualification du réseau, la mesure des centralités, la détection de motifs et les partitions (liste non exhaustive).
-Les options permettant de créer des réseaux unimodaux à partir d'un réseau bimodal seront abordées avant une série d'exercices sur des données relatives aux coopérations entre villes européennes, données issues de la thèse de Paul Gourdon.
-
-
- 
 ### Pré-requis
+
 Aucune connaissance en analyse de réseau n'est nécessaire pour suivre la séance.
 
 ### Outillage
-Principaux packages utilisés : [`igraph`](https://r.igraph.org/), [`manynet`](https://stocnet.github.io/manynet/), [`netrics`](https://stocnet.github.io/netrics/), [`bipartite`](https://cran.r-project.org/web/packages/bipartite/index.html)
 
+Principaux packages utilisés : [`igraph`](https://r.igraph.org/), [`manynet`](https://stocnet.github.io/manynet/), [`netrics`](https://stocnet.github.io/netrics/), [`bipartite`](https://cran.r-project.org/web/packages/bipartite/index.html)
 
 ### Supports
 
-* [A venir](#)
+- [A venir](#)
 
 ### Script et données
 
-* [A venir](#)
+- [A venir](#)
