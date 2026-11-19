@@ -16,12 +16,12 @@ toc: false
 - <u>Animation</u> : Laurent Beauguitte et Paul Gourdon\
 - <u>Lieu</u> : ~~Salle 1.122, Bâtiment Sud - Campus Condorcet~~ \
 - <u>Résumé & supports</u> : [Consulter la page dédiée](posts/seance22_reseau_bimodal.qmd)\
-- <u>inscription obligatoire</u> : [formulaire](https://evento.renater.fr/survey/elementr-analyse-de-resau-bimodal-bipartite-oo2w3v8r)\
-<br> - **11 décembre, 14h-16h30 - Cartographie sous R** - séance ElementR/RUSS\
+- <u>inscription obligatoire</u> : [~~formulaire~~](https://evento.renater.fr/survey/elementr-analyse-de-resau-bimodal-bipartite-oo2w3v8r)\
+<br> - ~~11 décembre, 14h-16h30 - Cartographie sous R~~ séance ElementR/RUSS **REPORTEÉ** ⚠️\
 - <u>Animation</u> : Timothée Giraud, Matthieu Viry et Nicolas Lambert\
 - <u>Lieu</u> : Salle sauvy (INED) - Campus Condorcet (+ visioconférence)\
-- <u>Résumé & supports</u> : [à venir](posts/seance23_cartographie_riate.qmd)\
-- <u>inscription obligatoire</u> : à venir <br> <!-- ::: panel-tabset -->
+- <u>Résumé & supports</u> : [~~à venir~~](posts/seance23_cartographie_riate.qmd)\
+- <u>inscription obligatoire</u> : ~~à venir~~ <br> <!-- ::: panel-tabset -->
 
 <!-- #### **Retour d'experience** -->
 
